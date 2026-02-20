@@ -1,20 +1,26 @@
 package com.example.ConflictTracker.DTO;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDate;
 import java.util.Set;
 
 public class ConflictDTO {
     private String name;
-    private LocalDate startDate;
+    private String startDate;
     private String status;
     private String description;
     private Set<Long> countryIds;
+
+    public ConflictDTO(){
+
+    }
 
     public String getName() {
         return name;
     }
 
-    public LocalDate getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
@@ -35,7 +41,7 @@ public class ConflictDTO {
         this.name = name;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
@@ -50,4 +56,6 @@ public class ConflictDTO {
     public void setCountryIds(Set<Long> countryIds) {
         this.countryIds = countryIds;
     }
+
+
 }

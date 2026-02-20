@@ -4,6 +4,7 @@ import com.example.ConflictTracker.DTO.ConflictDTO;
 import com.example.ConflictTracker.Entity.*;
 import com.example.ConflictTracker.Repository.ConflictRepository;
 import com.example.ConflictTracker.Repository.CountryRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -16,6 +17,7 @@ public class ConflictService {
     private final ConflictRepository conflictRepository;
     private final CountryRepository countryRepository;
 
+    @Autowired
     public ConflictService(ConflictRepository conflictRepository, CountryRepository countryRepository) {
         this.conflictRepository = conflictRepository;
         this.countryRepository = countryRepository;
@@ -57,10 +59,12 @@ public class ConflictService {
         conflict.setDescription(dto.getDescription());
 
         Set<Country> countries = new HashSet<>();
-        for (Long countryId : dto.getCountryIds()) {
-            Country country = countryRepository.findById(countryId)
-                    .orElseThrow(() -> new RuntimeException("Country not found"));
-            countries.add(country);
+        if (dto.getCountryIds() != null) {
+            for (Long countryId : dto.getCountryIds()) {
+                Country country = countryRepository.findById(countryId)
+                        .orElseThrow(() -> new RuntimeException("Country not found"));
+                countries.add(country);
+            }
         }
         conflict.setCountries(countries);
     }

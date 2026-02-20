@@ -5,6 +5,7 @@ import com.example.ConflictTracker.Entity.*;
 import com.example.ConflictTracker.Repository.ConflictRepository;
 import com.example.ConflictTracker.Repository.CountryRepository;
 import com.example.ConflictTracker.Repository.FactionRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -18,6 +19,7 @@ public class FactionService {
     private final ConflictRepository conflictRepository;
     private final CountryRepository countryRepository;
 
+    @Autowired
     public FactionService(FactionRepository factionRepository,
                           ConflictRepository conflictRepository,
                           CountryRepository countryRepository) {

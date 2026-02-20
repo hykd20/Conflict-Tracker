@@ -3,6 +3,7 @@ package com.example.ConflictTracker.Controller;
 import com.example.ConflictTracker.DTO.FactionDTO;
 import com.example.ConflictTracker.Entity.Faction;
 import com.example.ConflictTracker.Service.FactionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public class FactionController {
 
     private final FactionService factionService;
 
+    @Autowired
     public FactionController(FactionService factionService) {
         this.factionService = factionService;
     }

@@ -4,6 +4,7 @@ import com.example.ConflictTracker.DTO.ConflictDTO;
 import com.example.ConflictTracker.Entity.Conflict;
 import com.example.ConflictTracker.Entity.Status;
 import com.example.ConflictTracker.Service.ConflictService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class ConflictController {
 
     private final ConflictService conflictService;
 
+    @Autowired
     public ConflictController(ConflictService conflictService) {
         this.conflictService = conflictService;
     }

@@ -8,6 +8,10 @@ public class FactionDTO {
     private Long conflictId;
     private Set<Long> countryIds;
 
+    public FactionDTO(){
+
+    }
+
     public String getName() {
         return name;
     }

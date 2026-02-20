@@ -4,6 +4,7 @@ import com.example.ConflictTracker.DTO.EventDTO;
 import com.example.ConflictTracker.Entity.*;
 import com.example.ConflictTracker.Repository.ConflictRepository;
 import com.example.ConflictTracker.Repository.EventRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class EventService {
     private final EventRepository eventRepository;
     private final ConflictRepository conflictRepository;
 
+    @Autowired
     public EventService(EventRepository eventRepository, ConflictRepository conflictRepository) {
         this.eventRepository = eventRepository;
         this.conflictRepository = conflictRepository;

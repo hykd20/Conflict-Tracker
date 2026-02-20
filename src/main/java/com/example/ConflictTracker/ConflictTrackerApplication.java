@@ -3,7 +3,7 @@ package com.example.ConflictTracker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.example.ConflictTracker")
+@SpringBootApplication
 public class ConflictTrackerApplication {
 
 	public static void main(String[] args) {

@@ -26,6 +26,10 @@ public class Faction {
     )
     private Set<Country> supporterCountries = new HashSet<>();
 
+    public Faction(){
+
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -36,5 +40,21 @@ public class Faction {
 
     public void setSupporterCountries(Set<Country> supporterCountries) {
         this.supporterCountries = supporterCountries;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Conflict getConflict() {
+        return conflict;
+    }
+
+    public Set<Country> getSupporterCountries() {
+        return supporterCountries;
     }
 }

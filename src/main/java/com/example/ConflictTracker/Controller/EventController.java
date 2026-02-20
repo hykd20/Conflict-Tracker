@@ -3,6 +3,7 @@ package com.example.ConflictTracker.Controller;
 import com.example.ConflictTracker.DTO.EventDTO;
 import com.example.ConflictTracker.Entity.Event;
 import com.example.ConflictTracker.Service.EventService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public class EventController {
 
     private final EventService eventService;
 
+    @Autowired
     public EventController(EventService eventService) {
         this.eventService = eventService;
     }

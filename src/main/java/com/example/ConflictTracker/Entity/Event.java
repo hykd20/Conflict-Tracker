@@ -1,5 +1,6 @@
 package com.example.ConflictTracker.Entity;
 
+import com.example.ConflictTracker.DTO.EventDTO;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -21,6 +22,10 @@ public class Event {
     @JoinColumn(name = "conflict_id")
     private Conflict conflict;
 
+    public Event(){
+
+    }
+
     public void setEventDate(LocalDate eventDate) {
         this.eventDate = eventDate;
     }
@@ -35,5 +40,25 @@ public class Event {
 
     public void setConflict(Conflict conflict) {
         this.conflict = conflict;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public LocalDate getEventDate() {
+        return eventDate;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Conflict getConflict() {
+        return conflict;
     }
 }

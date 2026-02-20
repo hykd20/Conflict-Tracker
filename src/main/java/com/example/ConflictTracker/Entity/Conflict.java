@@ -27,7 +27,7 @@ public class Conflict {
 
     private String name;
 
-    private LocalDate startDate;
+    private String startDate;
 
     @Enumerated(EnumType.STRING)
     private Status status;
@@ -53,7 +53,7 @@ public class Conflict {
         this.name = name;
     }
 
-    public void setStartDate(LocalDate startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
@@ -69,5 +69,43 @@ public class Conflict {
         this.countries = countries;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setFactions(List<Faction> factions) {
+        this.factions = factions;
+    }
+
+    public void setEvents(List<Event> events) {
+        this.events = events;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Set<Country> getCountries() {
+        return countries;
+    }
+
+    public List<Faction> getFactions() {
+        return factions;
+    }
+
+    public List<Event> getEvents() {
+        return events;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

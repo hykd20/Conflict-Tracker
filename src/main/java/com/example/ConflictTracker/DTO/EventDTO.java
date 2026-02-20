@@ -9,6 +9,11 @@ public class EventDTO {
     private String description;
     private Long conflictId;
 
+
+    public EventDTO(){
+
+    }
+
     public LocalDate getEventDate() {
         return eventDate;
     }

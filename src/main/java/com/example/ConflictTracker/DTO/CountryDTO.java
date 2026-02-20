@@ -5,6 +5,10 @@ public class CountryDTO {
     private String name;
     private String code;
 
+    public CountryDTO(){
+
+    }
+
     public String getName() {
         return name;
     }
