@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/factions")
+@RequestMapping("/factions")
 public class FactionController {
 
     private final FactionService factionService;
