@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://db.nfhlxdphkvkkrelrlyyb.supabase.co:6543/postgres?sslmode=disable
-    username: postgres.nfhlxdphkvkkrelrlyyb
-    password: 77UBkbs8juJAaPdM
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
